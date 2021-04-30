@@ -2,6 +2,7 @@ public class Atuendo {
     Prenda parteSuperior;
     Prenda parteInferior;
     Prenda calzado;
+    String institucion;
 
     public Atuendo(Prenda parteSuperior, Prenda parteInferior, Prenda calzado){
         if(parteSuperior.tipoPrenda.categoria == Categoria.SUPERIOR &&
@@ -16,5 +17,9 @@ public class Atuendo {
     public Atuendo generarSugerencia(Prenda parteSuperior, Prenda parteInferior, Prenda calzado){
         Atuendo sugerencia = new Atuendo(parteSuperior, parteInferior, calzado);
         return sugerencia;
+    }
+
+    public void setInstitucion(String nombre){
+        this.institucion = nombre;
     }
 }
