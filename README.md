@@ -1,3 +1,7 @@
+#DIAGRAMA DE CLASES
+https://lucid.app/lucidchart/1232bfdf-c717-404b-a203-9feadc506ada/view?page=0_0#
+
+
 # java-base-project
 
 Esta es una plantilla de proyecto diseñada para: 
