@@ -8,4 +8,9 @@ public class ConfiguradorUniformes {
         atuendos.add(atuendo);
     }
 
+    public Atuendo generarSugerencia(Prenda parteSuperior, Prenda parteInferior, Prenda calzado){
+        Atuendo sugerencia = new Atuendo(parteSuperior, parteInferior, calzado);
+        return sugerencia;
+    }
+
 }

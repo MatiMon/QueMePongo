@@ -14,11 +14,6 @@ public class Atuendo {
         } else throw new AtuendoInvalidoException("el atuendo debe estar compuesto por una parte superior, una parte inferior y un calzado");
     }
 
-    public Atuendo generarSugerencia(Prenda parteSuperior, Prenda parteInferior, Prenda calzado){
-        Atuendo sugerencia = new Atuendo(parteSuperior, parteInferior, calzado);
-        return sugerencia;
-    }
-
     public void setInstitucion(String nombre){
         this.institucion = nombre;
     }

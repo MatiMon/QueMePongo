@@ -25,7 +25,27 @@ public class Prenda {
         this.colorSecundario = colorSecundario;
     }
 
+    public Prenda(TipoPrenda tipoPrenda){
+        if(tipoPrenda == null){
+            throw new PrendaInvalidaException("no puede haber prendas sin tipo");
+        }
+        this.tipoPrenda = tipoPrenda;
+        this.trama = trama;
+    }
+
     public Categoria getCategoria(){
         return tipoPrenda.categoria;
+    }
+
+    public void setMaterial(Material material) {
+        this.material = material;
+    }
+
+    public void setColorPrimario(Color colorPrimario) {
+        this.colorPrimario = colorPrimario;
+    }
+
+    public void setColorSecundario(Color colorSecundario) {
+        this.colorSecundario = colorSecundario;
     }
 }
