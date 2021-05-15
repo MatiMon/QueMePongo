@@ -11,5 +11,6 @@ public enum TipoPrenda {
         if(categoria == null){
             throw new TipoPrendaInvalidaException("no puede haber tipos de prenda sin categoria");
         }
+        this.categoria = categoria;
     }
 }
