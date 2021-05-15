@@ -6,13 +6,7 @@ public class Prenda {
   Trama trama;
 
   public Prenda(TipoPrenda tipoPrenda, Material material, Color colorPrimario, Color colorSecundario, Trama trama) {
-    //Validaciones
-    if (tipoPrenda == null || material == null || colorPrimario == null) {
-      throw new PrendaInvalidaException("no puede haber prendas sin tipo, material o color primario");
-    }
-    if ((tipoPrenda.categoria == Categoria.SUPERIOR || tipoPrenda.categoria == Categoria.INFERIOR) && material == Material.GOMA) {
-      throw new MaterialInconsistenteConPrendaSuperiorInferiorException("no puede haber prendas superiores o inferiores de goma");
-    }
+    validaciones(tipoPrenda, material, colorPrimario);
 
     //Configuracion
     if (trama == null) {
@@ -52,4 +46,36 @@ public class Prenda {
   public boolean esDeCategoria(Categoria categoria) {
     return this.getCategoria().equals(categoria);
   }
+
+  public void validaciones(TipoPrenda tipoPrenda, Material material, Color colorPrimario) {
+    validarTipoPrendaNotNull(tipoPrenda);
+    validarMaterialNotNull(material);
+    validarColorNotNull(colorPrimario);
+    validarPrendaSuperiorDeGoma(tipoPrenda, material);
+  }
+
+  public void validarTipoPrendaNotNull(TipoPrenda tipo) {
+    if (tipo == null) {
+      throw new PrendaInvalidaException("no puede haber prendas sin tipo");
+    }
+  }
+
+  public void validarMaterialNotNull(Material material) {
+    if (material == null) {
+      throw new PrendaInvalidaException("no puede haber prendas sin material");
+    }
+  }
+
+  public void validarColorNotNull(Color color) {
+    if (color == null) {
+      throw new PrendaInvalidaException("no puede haber prendas sin color primario");
+    }
+  }
+
+  public void validarPrendaSuperiorDeGoma(TipoPrenda tipoPrenda, Material material) {
+    if ((tipoPrenda.categoria == Categoria.SUPERIOR || tipoPrenda.categoria == Categoria.INFERIOR) && material == Material.GOMA) {
+      throw new MaterialInconsistenteConPrendaSuperiorInferiorException("no puede haber prendas superiores o inferiores de goma");
+    }
+  }
+
 }

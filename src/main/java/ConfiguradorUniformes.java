@@ -1,7 +1,8 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class ConfiguradorUniformes {
-  ArrayList<Atuendo> atuendos;
+  List<Atuendo> atuendos;
 
   public void configurarAtuendo(Atuendo atuendo, String nombreInstitucion) {
     atuendo.setInstitucion(nombreInstitucion);
