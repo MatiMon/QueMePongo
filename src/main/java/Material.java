@@ -1,3 +1,3 @@
 public enum Material {
-    CUERO, JEAN, TELA, GOMA;
+  CUERO, JEAN, TELA, GOMA;
 }
