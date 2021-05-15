@@ -5,7 +5,7 @@ public class Borrador {
   Color colorSecundario;
   Trama trama;
 
-  public Prenda crearPrenda(TipoPrenda tipoPrenda, Material material, Color colorPrimario, Color colorSecundario, Trama trama) {
+  public Prenda crearPrenda() {
     return new Prenda(tipoPrenda, material, colorPrimario, colorSecundario, trama);
   }
 
