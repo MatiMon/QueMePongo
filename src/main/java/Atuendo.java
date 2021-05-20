@@ -2,17 +2,12 @@ public class Atuendo {
   Prenda parteSuperior;
   Prenda parteInferior;
   Prenda calzado;
-  String institucion;
 
   public Atuendo(Prenda parteSuperior, Prenda parteInferior, Prenda calzado) {
     validaciones(parteSuperior, parteInferior, calzado);
     this.parteSuperior = parteSuperior;
     this.parteInferior = parteInferior;
     this.calzado = calzado;
-  }
-
-  public void setInstitucion(String nombre) {
-    this.institucion = nombre;
   }
 
   public void validaciones(Prenda parteSuperior, Prenda parteInferior, Prenda calzado) {
