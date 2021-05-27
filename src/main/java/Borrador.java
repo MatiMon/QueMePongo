@@ -4,9 +4,10 @@ public class Borrador {
   Color colorPrimario;
   Color colorSecundario;
   Trama trama;
+  int temperaturaMaximaAdecuada;
 
   public Prenda crearPrenda() {
-    return new Prenda(tipoPrenda, material, colorPrimario, colorSecundario, trama);
+    return new Prenda(tipoPrenda, material, colorPrimario, colorSecundario, trama, temperaturaMaximaAdecuada);
   }
 
   //Setters
@@ -28,5 +29,9 @@ public class Borrador {
 
   public void setTrama(Trama trama) {
     this.trama = trama;
+  }
+
+  public void setTemperaturaMaximaAdecuada(int temperaturaMaximaAdecuada) {
+    this.temperaturaMaximaAdecuada = temperaturaMaximaAdecuada;
   }
 }

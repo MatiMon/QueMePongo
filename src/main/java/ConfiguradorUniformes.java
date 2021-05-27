@@ -5,7 +5,6 @@ public class ConfiguradorUniformes {
   List<Atuendo> atuendos;
 
   public void configurarAtuendo(Atuendo atuendo, String nombreInstitucion) {
-    atuendo.setInstitucion(nombreInstitucion);
     atuendos.add(atuendo);
   }
 

@@ -1,3 +1,5 @@
+import excepciones.TipoPrendaInvalidaException;
+
 public enum TipoPrenda {
   ZAPATO(Categoria.CALZADO),
   CAMISA(Categoria.SUPERIOR),

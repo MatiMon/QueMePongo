@@ -1,13 +1,24 @@
+import excepciones.AtuendoInvalidoException;
+
 public class Atuendo {
   Prenda parteSuperior;
   Prenda parteInferior;
   Prenda calzado;
+  Prenda accesorio;
 
   public Atuendo(Prenda parteSuperior, Prenda parteInferior, Prenda calzado) {
     validaciones(parteSuperior, parteInferior, calzado);
     this.parteSuperior = parteSuperior;
     this.parteInferior = parteInferior;
     this.calzado = calzado;
+  }
+
+  public Atuendo(Prenda parteSuperior, Prenda parteInferior, Prenda calzado, Prenda accesorio) {
+    validaciones(parteSuperior, parteInferior, calzado);
+    this.parteSuperior = parteSuperior;
+    this.parteInferior = parteInferior;
+    this.calzado = calzado;
+    this.accesorio = accesorio;
   }
 
   public void validaciones(Prenda parteSuperior, Prenda parteInferior, Prenda calzado) {

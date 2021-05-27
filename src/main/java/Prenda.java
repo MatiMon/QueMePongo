@@ -1,11 +1,15 @@
+import excepciones.MaterialInconsistenteConPrendaSuperiorInferiorException;
+import excepciones.PrendaInvalidaException;
+
 public class Prenda {
   TipoPrenda tipoPrenda;
   Material material;
   Color colorPrimario;
   Color colorSecundario;
   Trama trama;
+  int temperaturaMaximaAdecuada;
 
-  public Prenda(TipoPrenda tipoPrenda, Material material, Color colorPrimario, Color colorSecundario, Trama trama) {
+  public Prenda(TipoPrenda tipoPrenda, Material material, Color colorPrimario, Color colorSecundario, Trama trama, int temperaturaMaximaAdecuada) {
     validaciones(tipoPrenda, material, colorPrimario);
 
     //Configuracion
@@ -17,6 +21,7 @@ public class Prenda {
     this.material = material;
     this.colorPrimario = colorPrimario;
     this.colorSecundario = colorSecundario;
+    this.temperaturaMaximaAdecuada = temperaturaMaximaAdecuada;
   }
 
   public Prenda(TipoPrenda tipoPrenda) {
@@ -41,6 +46,14 @@ public class Prenda {
 
   public void setColorSecundario(Color colorSecundario) {
     this.colorSecundario = colorSecundario;
+  }
+
+  public void setTrama(Trama trama) {
+    this.trama = trama;
+  }
+
+  public void setTemperaturaMaximaAdecuada(int temperaturaMaximaAdecuada) {
+    this.temperaturaMaximaAdecuada = temperaturaMaximaAdecuada;
   }
 
   public boolean esDeCategoria(Categoria categoria) {
@@ -78,4 +91,7 @@ public class Prenda {
     }
   }
 
+  public int getTemperaturaMaximaAdecuada() {
+    return temperaturaMaximaAdecuada;
+  }
 }
