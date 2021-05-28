@@ -3,8 +3,6 @@ import java.util.stream.Collectors;
 
 public class Guardarropas {
   private List<Prenda> prendas;
-  private List<Propuesta> propuestasPendientes;
-  private List<Propuesta> propuestasCompletadas;
   private List<Usuario> propietarios;
   //Criterio criterio;
 
@@ -24,25 +22,8 @@ public class Guardarropas {
     return prendas.stream().filter(prenda -> prenda.getTemperaturaMaximaAdecuada() < temperatura).collect(Collectors.toList());
   }
 
-  public void agregarPropuesta(Propuesta propuesta) {
-    propuestasPendientes.add(propuesta);
-  }
-
-  public void moverPropuestaACompletadas(Propuesta propuesta) {
-    propuestasPendientes.remove(propuesta);
-    propuestasCompletadas.add(propuesta);
-  }
-
   public List<Prenda> getPrendas() {
     return prendas;
-  }
-
-  public List<Propuesta> getPropuestasPendientes() {
-    return propuestasPendientes;
-  }
-
-  public List<Propuesta> getPropuestasCompletadas() {
-    return propuestasCompletadas;
   }
 
   public boolean contieneLaPrenda(Prenda prenda) {
