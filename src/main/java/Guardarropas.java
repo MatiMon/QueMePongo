@@ -3,11 +3,9 @@ import java.util.stream.Collectors;
 
 public class Guardarropas {
   private List<Prenda> prendas;
-  private List<Usuario> propietarios;
   //Criterio criterio;
 
   public Guardarropas(List<Usuario> propietarios) {
-    this.propietarios = propietarios;
   }
 
   public void agregarPrenda(Prenda prenda) {
