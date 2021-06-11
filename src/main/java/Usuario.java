@@ -46,5 +46,13 @@ public class Usuario {
     return propuestasCompletadas;
   }
 
+  public void agregarGuardarropas(Guardarropas guardarropas) {
+    this.listaDeGuardarropas.add(guardarropas);
+  }
+
+  public void quitarGuardarropas(Guardarropas guardarropas){
+    this.listaDeGuardarropas.remove(guardarropas);
+  }
+
 
 }
