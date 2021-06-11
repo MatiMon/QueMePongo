@@ -3,7 +3,7 @@ import java.util.stream.Collectors;
 
 public class Guardarropas {
   private List<Prenda> prendas;
-  //Criterio criterio;
+  Criterio criterio;
 
   public Guardarropas(List<Usuario> propietarios) {
   }
