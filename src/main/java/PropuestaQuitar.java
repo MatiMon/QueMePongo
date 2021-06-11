@@ -1,5 +1,3 @@
-import excepciones.DeshacerPropuestaInvalidException;
-
 public class PropuestaQuitar implements Propuesta {
 
   private Prenda prenda;
@@ -17,9 +15,6 @@ public class PropuestaQuitar implements Propuesta {
   }
 
   public void deshacerPropuestaAceptada() {
-    if (this.guardarropas.contieneLaPrenda(this.prenda)) {
-      throw new DeshacerPropuestaInvalidException("no habia sido aceptada anteriormente");
-    }
     this.guardarropas.getPrendas().add(this.getPrenda());
   }
 
