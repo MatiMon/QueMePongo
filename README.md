@@ -1,5 +1,5 @@
 # DIAGRAMA DE CLASES
-https://lucid.app/lucidchart/cb67f6d0-83f3-4d61-bdcc-6678522fc7ba/edit?page=xIvGIxWKZMfx##
+https://lucid.app/lucidchart/0c5f61a0-f7bd-4f35-9c04-70a29b39ddbb/edit?page=.HNKcCZ54~2U#
 
 
 # DUDAS
