@@ -1,0 +1,161 @@
+* "Como usuarie de QueMePongo quiero ver todas las prendas que tengo en mi guardarropas desde el navegador para poder administrarlas"
+GET http://localhost:8080/me/prendas/{idGuardarropas} o GET http://localhost:8080/prendas/{idUsuario}/{idGuardarropas}
+Body:
+{
+"idUsuario": id,
+"idGuardarropas": idGuardarropas
+}
+
+Codigos de respuesta:
+200 cuando se puede procesar la petición.
+204 (no content) cuando no existe el guardarropas.
+400 (bad request) cuando mandan mal la URI.
+500 (internal server error) cuando hay una falla del servicio.
+
+Body respuesta:
+[
+  {
+    "id": 1,
+    "tipo": "pantalon",
+    "talle": 35
+  },
+  {
+    "id": 2,
+    "tipo": "pantalon",
+    "talle": 36
+  }
+]
+
+
+* "Como usuario de QueMePongo, quiero crear una prenda desde el navegador"
+POST http://localhost:8080/prenda
+Body:
+{
+"tipo": "unTipo",
+"talle": unTalle
+}
+
+Codigos de respuesta:
+200 cuando se puede procesar la petición.
+400 (bad request) cuando esta mal la URI.
+500 (internal server error) cuando hay una falla del servicio.
+
+Body respuesta:
+{
+"id": 1,
+"tipo": "unTipo",
+"talle": unTalle
+}
+
+
+* "Como usuarie de QueMePongo quiero ver una prenda en particular que tengo en mi guardarropas para poder editarla"
+GET http://localhost:8080/me/prendas/{idGuardarropas}/idPrenda o GET http://localhost:8080/prendas/{idUsuario}/{idGuardarropas}/idPrenda
+Body:
+{
+"idUsuario": id,
+"idGuardarropas": idGuardarropas
+"idPrenda": idPrenda
+}
+
+Codigos de respuesta:
+200 cuando se puede procesar la petición.
+204 (no content) cuando no existe el guardarropas o la prenda.
+400 (bad request) cuando esta mal la URI.
+500 (internal server error) cuando hay una falla del servicio.
+
+Body respuesta:
+{
+"id": 1,
+"tipo": "pantalon",
+"talle": 35
+}
+
+
+PUT http://localhost:8080/me/prendas/{idGuardarropas}/idPrenda o PUT http://localhost:8080/prendas/{idUsuario}/{idGuardarropas}/idPrenda
+Body:
+{
+"idUsuario": id,
+"idGuardarropas": idGuardarropas,
+"idPrenda": idPrenda,
+"tipo": "unTipo",
+"talle": unTalle
+}
+
+Codigos de respuesta:
+200 cuando se puede procesar la petición.
+204 (no content) cuando no existe el guardarropas o la prenda.
+400 (bad request) cuando esta mal la URI.
+500 (internal server error) cuando hay una falla del servicio.
+
+Body respuesta:
+{
+"id": 1,
+"tipo": "unTipo",
+"talle": unTalle
+}
+
+
+* "Como usuarie de QueMePongo, quiero poder eliminar una prenda de mi guardarropas"
+DELETE http://localhost:8080/me/prendas/{idGuardarropas}/idPrenda o DELETE http://localhost:8080/prendas/{idUsuario}/{idGuardarropas}/idPrenda
+Body:
+{
+"idUsuario": id,
+"idGuardarropas": idGuardarropas,
+"idPrenda": idPrenda
+}
+
+Codigos de respuesta:
+200 cuando se puede procesar la petición.
+204 (no content) cuando no existe el guardarropas o la prenda.
+400 (bad request) cuando esta mal la URI.
+500 (internal server error) cuando hay una falla del servicio.
+
+Body respuesta:
+{
+}
+
+
+* "Como usuarie de QueMePongo, quiero poder ver mis eventos para administrarlos"
+GET http://localhost:8080/me/eventos o GET http://localhost:8080/{idUsuario}/eventos
+Body:
+{
+"idUsuario": id
+}
+
+Codigos de respuesta:
+200 cuando se puede procesar la petición.
+204 (no content) cuando no existe el usuario.
+400 (bad request) cuando esta mal la URI.
+500 (internal server error) cuando hay una falla del servicio.
+
+Body respuesta:
+{
+[
+(No tengo en mi diagrama de clases la morfología de la clase "Eventos" como para dar un ejemplo)
+]
+}
+
+
+* "Como usuarie de QueMePongo, quiero poder abrir las sugerencias de prendas para un evento en mi navegador"
+GET http://localhost:8080/me/eventos/{idEvento}/sugerencias o GET http://localhost:8080/{idUsuario}/eventos/{idEvento}/sugerencias
+Body:
+{
+"idUsuario": id,
+"idEvento": idEvento
+}
+
+Codigos de respuesta:
+200 cuando se puede procesar la petición.
+204 (no content) cuando no existe el usuario o el evento.
+400 (bad request) cuando esta mal la URI.
+500 (internal server error) cuando hay una falla del servicio.
+
+Body respuesta:
+{
+[
+"idSugerencia": idSugerencia,
+"idPrenda": idPrenda,
+"tipo": "unTipo",
+"talle": unTalle
+]
+}
