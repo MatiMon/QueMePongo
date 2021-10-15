@@ -1,7 +1,7 @@
 public class PropuestaAgregar implements Propuesta {
 
-  private Prenda prenda;
-  private Guardarropas guardarropas;
+  private final Prenda prenda;
+  private final Guardarropas guardarropas;
 
   public PropuestaAgregar(Prenda prenda, Guardarropas guardarropas) {
     this.prenda = prenda;

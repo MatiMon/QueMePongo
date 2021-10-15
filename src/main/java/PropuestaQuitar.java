@@ -1,7 +1,7 @@
 public class PropuestaQuitar implements Propuesta {
 
-  private Prenda prenda;
-  private Guardarropas guardarropas;
+  private final Prenda prenda;
+  private final Guardarropas guardarropas;
 
   public PropuestaQuitar(Prenda prenda, Guardarropas guardarropas) {
     this.prenda = prenda;

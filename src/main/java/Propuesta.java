@@ -1,9 +1,9 @@
 public interface Propuesta {
 
-  public void modificar(boolean fueAceptada);
+  void modificar(boolean fueAceptada);
 
-  public void deshacerPropuestaAceptada();
+  void deshacerPropuestaAceptada();
 
-  public Guardarropas getGuardarropas();
+  Guardarropas getGuardarropas();
 
 }

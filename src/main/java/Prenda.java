@@ -29,7 +29,6 @@ public class Prenda {
       throw new PrendaInvalidaException("no puede haber prendas sin tipo");
     }
     this.tipoPrenda = tipoPrenda;
-    this.trama = trama;
   }
 
   public Categoria getCategoria() {
